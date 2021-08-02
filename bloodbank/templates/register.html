@@ -1,0 +1,318 @@
+{% extends 'root.html' %}
+
+
+{% block title %}
+    Registration -
+{% endblock %}
+
+{% block body %}
+    <!--start header area-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://i.ibb.co/grDLFDR/ourbloodbank-logo.png" alt="ourbloodbank" border="0">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 my_anymation">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('demoDB') }}">Main Database</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('about') }}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('login') }}">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--end header area-->
+    <section class="main_register_form_area">
+        <div class="register_bg">
+            <div class="container">
+                <div class="card bg-success">
+                    <article class="card-body mx-auto" style="max-width: 450px;">
+                        <h4 class="card-title mt-3 text-center">Create Account</h4>
+                        <p class="text-center">Get started with your free account</p>
+                        <form method="POST" action="" enctype="multipart/form-data">
+
+                            {{ form.hidden_tag() }}
+
+                            <div class="form-group input-group">
+                                <!--div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class='bx bxs-user'></i> </span>
+                                </div-->
+                                {{ form.name.label(class="form-label", style="margin-left: 0;") }}
+
+                                {% if form.name.errors %}
+                                    {{ form.name(class="form-control text-capitalize is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.name.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.name(class="form-control text-capitalize") }}
+                                {% endif %}
+
+                            </div>
+
+                            <div class="form-group input-group">
+                                <!--div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class='bx bxs-user'></i> </span>
+                                </div-->
+                                {{ form.username.label(class="form-label", style="margin-left: 0;") }}
+
+                                {% if form.username.errors %}
+                                    {{ form.username(class="form-control text-lowercase is-invalid", id="username", onKeyUp="validateUsername()") }}
+
+                                    <div class="invalid-feedback">
+                                        {% for error in form.username.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.username(class="form-control text-lowercase", id="username", onKeyUp="validateUsername()") }}
+
+                                {% endif %}
+
+                            </div>
+
+                            <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <!--div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class='bx bxs-donate-blood'></i> </span>
+                                </div-->
+                                {{ form.bloodgroup.label(class="form-label", style="margin-left: 0;") }}
+
+                                {% if form.bloodgroup.errors %}
+                                    {{ form.bloodgroup(class="form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.bloodgroup.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.bloodgroup(class="form-control") }}
+                                {% endif %}
+                            </div>
+
+                            <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <!--div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class='bx bx-envelope' ></i> </span>
+                                </div-->
+                                {{ form.email.label(class="form-label", style="margin-left: 0;") }}
+
+                                {% if form.email.errors %}
+                                    {{ form.email(class="form-control text-lowercase is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.email.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.email(class="form-control text-lowercase") }}
+                                {% endif %}
+                            </div>
+
+                            <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <!--div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class='bx bxs-phone' ></i> </span>
+                                </div-->
+                                <!--elect class="custom-select" style="max-width: 120px;">
+                                    <option selected="">+880</option>
+                                    <option value="1">+972</option>
+                                    <option value="2">+198</option>
+                                    <option value="3">+701</option>
+                                </select-->
+                                {{ form.mobile.label(class="form-label", style="margin-left: 0;") }}
+
+                                {% if form.mobile.errors %}
+                                    {{ form.mobile(class="form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.mobile.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.mobile(class="form-control") }}
+                                {% endif %}
+                            </div>
+
+                            <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <!--div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class='bx bxs-phone' ></i> </span>
+                                </div-->
+                                <!--elect class="custom-select" style="max-width: 120px;">
+                                    <option selected="">+880</option>
+                                    <option value="1">+972</option>
+                                    <option value="2">+198</option>
+                                    <option value="3">+701</option>
+                                </select-->
+                                {{ form.lastdate.label(class="form-label", style="margin-left: 0;") }}
+
+                                {% if form.lastdate.errors %}
+                                    {{ form.lastdate(class="form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.lastdate.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.lastdate(class="form-control") }}
+                                {% endif %}
+                            </div>
+
+                            <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <!--div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class='bx bxs-phone' ></i> </span>
+                                </div-->
+                                <!--elect class="custom-select" style="max-width: 120px;">
+                                    <option selected="">+880</option>
+                                    <option value="1">+972</option>
+                                    <option value="2">+198</option>
+                                    <option value="3">+701</option>
+                                </select-->
+                                {{ form.numberofdonation.label(class="form-label", style="margin-left: 0;") }}
+
+                                {% if form.numberofdonation.errors %}
+                                    {{ form.numberofdonation(class="form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.numberofdonation.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.numberofdonation(class="form-control") }}
+                                {% endif %}
+                            </div>
+
+                            <!-- form-group// -->
+                            <div class="form-group input-group mt-3">
+                                    <h5> Address </h5>
+                                <div class="javascript-condational-form">
+                                    <!--Division Section-->
+                                    <label for="division" style="margin-left: 0;">Select Division</label>
+                                    <select name="division" id="divisions" onchange="divisionsList();">
+                                        <option disabled selected>Select Division</option>
+                                        <option value="Rangpur">Rangpur</option>
+                                        <option value="Dhaka">Dhaka</option>
+                                        <option value="Chattogram">Chattogram</option>
+                                        <option value="Barishal">Barishal</option>
+                                        <option value="Khulna">Khulna</option>
+                                        <option value="Mymensingh">Mymensingh</option>
+                                        <option value="Rajshahi">Rajshahi</option>
+                                        <option value="Sylhet">Sylhet</option>
+                                    </select>
+                                    <!--/ Division Section-->
+                                    <!--Districts Section-->
+                                    <label for="distr" style="margin-left: 0;">Select District</label>
+                                    <select name="district" id="distr" onchange="thanaList();" required></select>
+                                    <!--/ Districts Section-->
+                                    <!--Police Station Section-->
+                                    <label for="polic_sta" style="margin-left: 0;">Upazila</label>
+                                    <select name="upazila" id="upazila"></select>
+                                    <!--/ Upazila-->
+                                </div>
+                            </div>
+
+                            <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <!--div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class='bx bxs-lock-alt' ></i> </span>
+                                </div-->
+                                {{ form.password.label(class="form-label", style="margin-left: 0;") }}
+
+                                {% if form.password.errors %}
+                                    {{ form.password(class="form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.password.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.password(class="form-control") }}
+                                {% endif %}
+                            </div>
+
+                            <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <!--div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class='bx bxs-lock-alt' ></i> </span>
+                                </div-->
+                                {{ form.confirm_password.label(class="form-label", style="margin-left: 0;") }}
+
+                                {% if form.confirm_password.errors %}
+                                    {{ form.confirm_password(class="form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.confirm_password.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.confirm_password(class="form-control") }}
+                                {% endif %}
+                            </div> <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <!--div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class='bx bxs-image-add' ></i> </span>
+                                </div-->
+                                {{ form.picture.label(class="form-label", style="margin-left: 0;") }}
+
+                                {% if form.picture.errors %}
+                                    {{ form.picture(class="form-control is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.picture.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.picture(class="form-control") }}
+                                {% endif %}
+                            </div> <!-- form-group// -->
+                            <div class="form-group mt-5 mb-5 text-center">
+                                {{ form.submit(class="btn btn-primary btn-block", id="submit") }}
+                            </div> <!-- form-group// -->
+                            <p class="text-center"> Have an account? <a href="{{ url_for('login') }}"> Log In </a> </p>
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function validateUsername(){
+            console.log('start');
+            let nameRegex = /^[a-zA-Z0-9-]{3,30}$/ ;
+            let grabusername = document.getElementById('username'),
+                submitbutton = document.getElementById('submit');
+            validUsername = grabusername.value;
+            if(nameRegex.test(validUsername)){
+                console.log('valid');
+                grabusername.classList.remove('is-invalid');
+                submitbutton.classList.remove('disabled');
+            } else {
+                console.log('invalid');
+                grabusername.classList.toggle('is-invalid');
+                submitbutton.classList.toggle('disabled');
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/dependent.js') }}"></script>
+
+{% endblock %}

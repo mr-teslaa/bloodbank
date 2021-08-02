@@ -1,0 +1,59 @@
+{% extends 'root.html' %}
+
+{% block title %}
+    Profile -
+{% endblock %}
+
+{% block body %}
+
+    <!--Personal Data Sheet-->
+    <div class="personal_information">
+        <div class="container">
+            <div class="personal_details">
+                <div class="p_heading">
+                    <h1>PERSONAL DATA SHEET</h1>
+                </div>
+                <div class="personal_img">
+                    <img src="{{ url_for('static', filename='profile_pics/' + user.image_file) }}" alt="{{ user.name }}-bloodbank">
+                </div>
+                <div class="details">
+
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                            <tr>
+                                <th scope="row">NAME</th>
+                                <td class="text-capitalize">{{ user.name }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">PHONE</th>
+                                <td><a href="tel:{{user.mobile}}">+880{{user.mobile}}</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">BLOOD GROUP</th>
+                                <td class="text-capitalize">{{ user.bloodgroup }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">ADDRESS</th>
+                                <td><b>UPZALIA:</b> {{user.upazila}}, <b>DISTRICT:</b> {{user.district}}, <b>DIVISION:</b> {{user.division}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">LAST DATE OF BLOOD DONATION</th>
+                                <td>{{ user.lastdate.strftime('%d-%m-%Y') }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">HOW MANY TIMES HAVE I GIVEN BLOOD</th>
+                                <td>{{ user.numberofdonation }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--jquery js-->
+    <script src="{{ url_for('static', filename='js/jquery_filtering.js') }}"></script>
+    <!--bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--custom js-->
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+{% endblock %}

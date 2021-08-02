@@ -1,0 +1,139 @@
+{% extends 'root.html' %}
+
+
+{% block body %}
+    <!--start header area-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/logo/Logo%2001.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="main_database.html">Main Database</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="About_us.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--end header area-->
+    <section class="main_register_form_area">
+        <div class="register_bg">
+            <div class="container">
+                <div class="card bg-light">
+                    <article class="card-body mx-auto" style="max-width: 450px;">
+                        <h4 class="card-title mt-3 text-center">Create Account</h4>
+                        <p class="text-center">Get started with your free account</p>
+
+                        <form>
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                </div>
+                                {% if form.email.errors %}
+                                {{ form.email(class="form-control is-invalid", placeholder="Full Name") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.email.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.email(class="form-control", placeholder="Full Name") }}
+                                {% endif %}
+                            </div> <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-fire"></i> </span>
+                                </div>
+                                <input name="" class="form-control" placeholder="Blood Group" type="text">
+                            </div> <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                                </div>
+                                <input name="" class="form-control" placeholder="Email address" type="email">
+                            </div> <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                                </div>
+                                <select class="custom-select" style="max-width: 120px;">
+                                    <option selected="">+880</option>
+                                    <option value="1">+972</option>
+                                    <option value="2">+198</option>
+                                    <option value="3">+701</option>
+                                </select>
+                                <input name="" class="form-control" placeholder="Phone number" type="text">
+                            </div> <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-building"></i>Address</span>
+                                </div>
+                                <div class="javascript-condational-form">
+                                    <form action="">
+                                        <!--Division Section-->
+                                        <label for="divisions">Select Division</label>
+                                        <select name="divisions" id="divisions" onchange="divisionsList();">
+                                            <option disabled selected>Select Division</option>
+                                            <option value="Rangpur">Rangpur</option>
+                                            <option value="Dhaka">Dhaka</option>
+                                            <option value="Chattogram">Chattogram</option>
+                                            <option value="Barishal">Barishal</option>
+                                            <option value="Khulna">Khulna</option>
+                                            <option value="Mymensingh">Mymensingh</option>
+                                            <option value="Rajshahi">Rajshahi</option>
+                                            <option value="Sylhet">Sylhet</option>
+                                        </select>
+                                        <!--/ Division Section-->
+
+
+                                        <!--Districts Section-->
+                                        <label for="distr">Select District</label>
+                                        <select name="" id="distr" onchange="thanaList();"></select>
+                                        <!--/ Districts Section-->
+
+                                        <!--Police Station Section-->
+                                        <label for="polic_sta">Upazila</label>
+                                        <select name="" id="upazila"></select>
+                                        <!--/ Upazila-->
+                                    </form>
+                                </div>
+                            </div> <!-- form-group// -->
+
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                </div>
+                                <input class="form-control" placeholder="Create password" type="password">
+                            </div> <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                </div>
+                                <input class="form-control" placeholder="Repeat password" type="password">
+                            </div> <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-file-image"></i> </span>
+                                </div>
+                                <input class="form-control" placeholder="" type="file">
+                            </div> <!-- form-group// -->
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block"> Create Account </button>
+                            </div> <!-- form-group// -->
+                            <p class="text-center">Have an account? <a href="login.html">Log In</a> </p>
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

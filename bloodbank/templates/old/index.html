@@ -1,0 +1,504 @@
+{% extends 'root.html' %}
+
+
+{% block body %}
+    <!--start header area-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/logo/Logo%2001.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('demoDB') }}">Main Database</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('about') }}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('register') }}">Registaion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('login') }}">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--end header area-->
+    <!--start slider area-->
+    <div class="slider_area" data-aos="fade-up" data-aos-duration="1500">
+        <div class="container">
+            <div class="slider">
+                <div id="myCarousel" class="carousel slide carousel--fade shadow" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-item active">
+                            <img class="img-fluid" src="assets/images/slider/20210628_144540.jpg" width="1366" height="768" alt="First slide">
+                            <div class="container">
+                                <div class="carousel-caption text-left">
+                                    <h2 class="display-4 font-weight-bold">WELLCOME</h2>
+                                    <p class="lead font-weight-bold">Life becomes blessed only when a smile is put on someone else's face because of your small sacrifice</p>
+                                    <!--                        <p><a class="btn btn-lg btn-primary rounded-pill shadow" href="#" role="button">Call to Action</a></p>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="assets/images/slider/20210628_144457.jpg" width="1366" height="768" alt="Second slide">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h2 class="display-4 font-weight-bold">HELPING HAND</h2>
+                                    <p class="lead font-weight-bold">If one bag of blood saves someone else's life, why don't I donate blood?</p>
+<!--                                    <p><a class="btn btn-lg btn-primary rounded-pill shadow" href="#" role="button">Call to Action</a></p>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="img-fluid" src="assets/images/slider/20210628_144501.jpg" width="1366" height="768" alt="Third slide">
+                            <div class="container">
+                                <div class="carousel-caption text-right">
+                                    <h2 class="display-4 font-weight-bold">SMILE</h2>
+                                    <p class="lead font-weight-bold">If one bag of blood saves someone else's life, why don't I donate blood?</p>
+                                    <!--                        <p><a class="btn btn-lg btn-primary rounded-pill shadow" href="#" role="button">Call to Action</a></p>-->
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end slider area-->
+    <!--start join with us-->
+    <section class="join_with_us_area">
+        <div class="container">
+            <div class="join_with_us row">
+                <div class="join_with_us_heading d-flex justify-content-center col-12 col-md-12 col-lg-12" data-aos="flip-up" data-aos-duration="1500">
+                    <h1>JOIN WITH US AND SAVE LIFE</h1>
+                </div>
+                <div class="join_with_us_form d-flex justify-content-center col-12" data-aos="zoom-in" data-aos-duration="1500">
+                    <button type="button" class="btn">
+                        <div class="login-box">
+                            <form class="new_f">
+                                <a href="register_form.html">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    REGESTATION
+                                </a>
+                            </form>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end join with us-->
+    <!--Why we blood donat section start-->
+    <section class="why_we_blood_donat_main_area">
+        <div class="container">
+            <div class="why_we_blood_donat_area">
+                <div class="why_we_blood_donat_heading row">
+                    <div class="join_with_us_heading d-flex justify-content-center col-12 col-md-12 col-lg-12" data-aos="flip-up" data-aos-duration="1500">
+                        <h1>WHY WE DONATE BLOOD ?</h1>
+                    </div>
+                </div>
+                <div class="why_we_blood_donat row">
+                    <div class="col-sm-12 col-md-8 col-lg-8 mx-auto">
+                        <div class="w_details" data-aos="fade-right" data-aos-duration="1500">
+                            <h3>• Why should I donate blood?</h3>
+                            <ul>
+                                <li>Approximately 1000 donors are needed monthly to support the needs of our patients.</li>
+                                <li>About 400 donors per month must be from specialized processes, such as donating platelets to meet the requests of oncology patients.</li>
+                                <li>Every month 500 people have to be first-time donors to cover those who couldn't donate in the previous period.</li>
+                                <li>Every month 500 people have to be first-time donors to cover those who couldn't donate in the previous period.</li>
+                                <li>3,000 people are needed every six months to donate because of their rare blood group, such as "O Negative".</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-8 col-lg-8 mx-auto">
+                        <div class="w_details" data-aos="fade-left" data-aos-duration="1500">
+                            <h3>• Who can give blood?</h3>
+                            <h4>Most people can donate blood, if:</h4>
+                            <ul>
+                                <li>Have a lifestyle with healthy habits.</li>
+                                <li>They weigh more than 50 kg.</li>
+                                <li>They are between 18 and 64 years old.</li>
+                                <li>No tattoos or piercings for less than 1 year.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-8 col-lg-8 mx-auto">
+                        <div class="w_details" data-aos="fade-down" data-aos-duration="1500">
+                            <h3>• How often you can donate blood?</h3>
+                            <ul>
+                                <li>Men older than 30, every 3 months.</li>
+                                <li>Women between 18 and 30 years old, every 6 months.</li>
+                                <li>They are between 18 and 64 years old.</li>
+                                <li>Women older than 30, every 4 months.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-8 col-lg-8 mx-auto">
+                        <div class="w_details" data-aos="fade-up" data-aos-duration="1500">
+                            <h3>• Remember, you should NOT give blood, if:</h3>
+                            <ul>
+                                <li>You've had some biological hazard accidents in the last year.</li>
+                                <li>You have or have had Leishmaniasis</li>
+                                <li>You have been bitten by or had contact with kissing bugs.</li>
+                                <li>You have underlying medical condition/disease such as diabetes, heart problems, epilepsy, cancer, among others.</li>
+                                <li>You are pregnant, breastfeeding or have had a curettage or abortion in the last 12 months.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Why we blood donat section end-->
+    <!--Counter area start-->
+    <section class="counter_area_start">
+        <div class="container">
+            <div class="counter_area_heading row">
+                <div class="join_with_us_heading d-flex justify-content-center col-12 col-md-12 col-lg-12" data-aos="flip-up" data-aos-duration="1500">
+                    <h1>COUNTER</h1>
+                </div>
+            </div>
+            <div class="main_counter_area">
+                <div class="counter_area row">
+                    <!--copy item-->
+                    <div class="counter_item col-sm-4" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="counter_icon">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </div>
+                        <div class="counter_text">
+                            <h3>Total Donors</h3>
+                            <span class="counter">14582</span>
+                        </div>
+                    </div>
+                    <!--copy item-->
+                    <div class="counter_item col-sm-4"data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500" >
+                        <div class="counter_icon">
+                            <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="counter_text">
+                            <h3>Happy Donars</h3>
+                            <span class="counter">4744</span>
+                        </div>
+                    </div>
+                    <!--copy item-->
+                    <div class="counter_item col-sm-4" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                        <div class="counter_icon">
+                            <i class="fa fa-smile-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="counter_text">
+                            <h3>Success Smile</h3>
+                            <span class="counter">8547</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Counter area end-->
+    <!--volunteers section start-->
+    <seciton class="volunteers_section">
+        <div class="container">
+            <div class="volunteers_heading row">
+                <div class="join_with_us_heading d-flex justify-content-center col-12 col-md-12 col-lg-12" data-aos="flip-up" data-aos-duration="1500">
+                    <h1>OUR VOLUNTEERS</h1>
+                </div>
+            </div>
+            <div id="wrapper" data-aos="flip-right" data-aos-duration="3000">
+                <figure>
+                    <div class="mis-stage">
+                        <!-- The element to select and apply miSlider to - the class is optional -->
+                        <ol class="mis-slider">
+                            <!-- The slider element - the class is optional - Set width of slide using CSS on this element -->
+                            <li class="mis-slide">
+                                <!-- A slide element - the class is optional -->
+                                <a href="#" class="mis-container">
+                                    <!-- A slide container - this element is optional, if absent the plugin adds it automatically -->
+                                    <figure>
+                                        <!-- Slide content - whatever you want -->
+                                        <img src="assets/images/bg/09.jpg" alt="Pink Water Lillies">
+                                        <figcaption>ADESH SARKER</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="mis-slide">
+                                <a href="#" class="mis-container">
+                                    <figure>
+                                        <img src="assets/images/bg/08.jpg" alt="Pond with Lillies">
+                                        <figcaption>SAJIB SARKER</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="mis-slide">
+                                <a href="#" class="mis-container">
+                                    <figure>
+                                        <img src="assets/images/bg/07.jpg" alt="Hidden Pond">
+                                        <figcaption>NO MORE</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="mis-slide">
+                                <a href="#" class="mis-container">
+                                    <figure>
+                                        <img src="assets/images/bg/06.jpg" alt="Shrine">
+                                        <figcaption>ADESH SARKER</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="mis-slide">
+                                <a href="#" class="mis-container">
+                                    <figure>
+                                        <img src="assets/images/bg/08.jpg" alt="White Water Lillies">
+                                        <figcaption>OLD IS GOLD</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="mis-slide">
+                                <a href="#" class="mis-container">
+                                    <figure>
+                                        <img src="assets/images/bg/04.jpg" alt="Garden Walkway">
+                                        <figcaption>ARIFUL ISLAM</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                            <li class="mis-slide">
+                                <a href="#" class="mis-container">
+                                    <figure>
+                                        <img src="assets/images/bg/08.jpg" alt="Lilly with Bee">
+                                        <figcaption>ADESH</figcaption>
+                                    </figure>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </figure>
+            </div>
+        </div>
+    </seciton>
+
+    <!--admin section start-->
+<section class="admin_start row">
+        <div class="card admin col-md-8 mx-auto" style="width: 30rem;">
+        <img class="card-img-top" src="assets/images/Personal/adesh.jpg" alt="Card image cap">
+        <div class="card-body col-md-8 mx-auto">
+            <h5 class="card-title">ADESH CHANDRO SARKER</h5>
+            <p class="card-text">Admin: BD Blood Bank <br>Blood Gropu: B+ <br>Mobile: +8801610121441 </p>
+        </div>
+        <div class="card-body col-md-8 mx-auto">
+            <ul class="socialIcons">
+                <li class="facebook"><a href=""><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>
+                <li class="twitter"><a href=""><i class="fa fa-fw fa-twitter"></i>Twitter</a></li>
+                <li class="instagram"><a href=""><i class="fa fa-fw fa-instagram"></i>Instagram</a></li>
+                <li class="pinterest"><a href=""><i class="fa fa-fw fa-pinterest-p"></i>Pinterest</a></li>
+                <li class="steam"><a href=""><i class="fa fa-fw fa-steam"></i>Steam</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+    <!--admin section end-->
+    <!--volunteers section end-->
+    <!--start footer section-->
+    <footer class="main_footer_section_start">
+        <div class="container">
+            <div class="main_footer_area">
+                <div class="footer_area row">
+                    <!--copy item-->
+                    <div class="footer_item col-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end footer section-->
+    <!--  start footer section  -->
+    <footer class="main-footer-section">
+        <div class="container">
+            <div class="footer-text-section row d-flex justify-content-between">
+                <!--copy item-->
+                <div class="footer-item col-lg-4 col-md-4 col-sm-12">
+                    <div class="footer-heading">
+                        <h1>About BD Blood Bank</h1>
+                    </div>
+                    <div class="footer-details">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt voluptatibus architecto perferendis, voluptas at consequuntur. </p>
+                        <a href="#"> <img src="assets/images/logo/Logo%2001.png" alt=""></a>
+                    </div>
+                </div>
+                <!--copy item-->
+                <div class="footer-item col-lg-4 col-md-4 col-sm-12">
+                    <div class="footer-heading">
+                        <h1>Govt Link</h1>
+                    </div>
+                    <div class="link">
+                        <ul>
+                            <li><a href="#">Dhaka Medical</a></li>
+                            <li><a href="#">Health Ministry</a></li>
+                            <li><a href="#">Mobile Application</a></li>
+                            <li><a href="#">All Medical</a></li>
+                            <li><a href="#">All Medical</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--copy item-->
+                <div class="footer-item col-lg-4 col-md-4 col-sm-12">
+                    <div class="footer-heading">
+                        <h1>Contact</h1>
+                    </div>
+                    <div class="link">
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Facebook</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-section row">
+                <div class="copyright col-lg-6 col-md-6 col-sm-12 d-flex justify-content-start">
+                    <p><i class="fa fa-copyright" aria-hidden="true"></i>BD Blood Bank, all right reserved. </p>
+                </div>
+                <div class="copyright col-lg-6 col-md-6 col-sm-12 d-flex justify-content-end">
+                    <span><a href="#">Design: Adesh Chandro Sarker</a> </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--  end footer section  -->
+
+    <!--aos js-->
+    <script src=""></script>
+    <script src="{{ url_for('static', filename='assets/js/aos.js') }}"></script>
+    <!--bootstrap js-->
+    <script src=""></script>
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js') }}"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!--counter js-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src=""></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.counterup.min.js') }}"></script>
+
+    <!--misliders js-->
+    <script src="{{ url_for('static', filename='assets/js/mislider.js') }}"></script>
+    <script>
+        jQuery(function($) {
+            var slider = $('.mis-stage').miSlider({
+                //  The height of the stage in px. Options: false or positive integer. false = height is calculated using maximum slide heights. Default: false
+                //stageHeight: 380,
+                //  Number of slides visible at one time. Options: false or positive integer. false = Fit as many as possible.  Default: 1
+                slidesOnStage: false,
+                //  The location of the current slide on the stage. Options: 'left', 'right', 'center'. Defualt: 'left'
+                slidePosition: 'center',
+                //  The slide to start on. Options: 'beg', 'mid', 'end' or slide number starting at 1 - '1','2','3', etc. Defualt: 'beg'
+                slideStart: 'mid',
+                //  The relative percentage scaling factor of the current slide - other slides are scaled down. Options: positive number 100 or higher. 100 = No scaling. Defualt: 100
+                slideScaling: 150,
+                //  The vertical offset of the slide center as a percentage of slide height. Options:  positive or negative number. Neg value = up. Pos value = down. 0 = No offset. Default: 0
+                offsetV: -5,
+                //  Center slide contents vertically - Boolean. Default: false
+                centerV: true,
+                //  Opacity of the prev and next button navigation when not transitioning. Options: Number between 0 and 1. 0 (transparent) - 1 (opaque). Default: .5
+                navButtonsOpacity: 1
+            });
+        });
+    </script>
+    <!--slider js-->
+    <script src="assets/js/jquery-1.9.0.min.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery-1.9.0.min.js') }}"></script>
+    <!--custom js-->
+    <script src=""></script>
+    <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+    <!--slider js new-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".carousel").carousel({
+                interval: false,
+                pause: true,
+                touch: true
+            });
+            $(".carousel .carousel-inner").swipe({
+                swipeLeft: function(event, direction, distance, duration, fingerCount) {
+                    this.parent().carousel("next");
+                },
+                swipeRight: function() {
+                    this.parent().carousel("prev");
+                },
+                threshold: 0,
+                tap: function(event, target) {
+                    window.location = $(this).find(".carousel-item.active a").attr("href");
+                },
+                excludedElements: "label, button, input, select, textarea, .noSwipe"
+            });
+            $(".carousel .carousel-control-prev").on("click", function() {
+                $(".carousel").carousel("prev");
+            });
+            $(".carousel .carousel-control-next").on("click", function() {
+                $(".carousel").carousel("next");
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <script>
+        try {
+            fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", {
+                method: 'HEAD',
+                mode: 'no-cors'
+            })).then(function(response) {
+                return true;
+            }).catch(function(e) {
+                var carbonScript = document.createElement("script");
+                carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+                carbonScript.id = "_carbonads_js";
+                document.getElementById("carbon-block").appendChild(carbonScript);
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    </script>
+
+{% endblock %}

@@ -1,0 +1,138 @@
+{% extends 'root.html' %}
+
+
+{% block body %}
+    <!--start header area-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/logo/Logo%2001.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="About_us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="register_form.html">Registaion</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="login.html">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--end header area-->
+    <!--Database Start-->
+    <div class="container">
+        <div class="d_heading">
+            <h1>Data Tables</h1>
+            <p>Type something in the input field to search the table for Boood Group, Names, Phone Number or Adress:</p>
+        </div>
+        <table id="table_id" class="table table-responsive text-center">
+            <thead>
+                <tr>
+                    <th scope="col" class="table-light">Serial No</th>
+                    <th scope="col" class="table-light">Name</th>
+                    <th scope="col" class="table-light">Blood Group</th>
+                    <th scope="col" class="table-light">Phone Number</th>
+                    <th scope="col" class="table-light">Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" class="table-warning">1</th>
+                    <td class="table-success"><a href="personal_profile.html">Adesh Chandro Sarker</a></td>
+                    <td class="table-danger">B+</td>
+                    <td class="table-info">+8801610121441</td>
+                    <td class="table-dark">Saidpur, Nilphamari</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="table-warning">2</th>
+                    <td class="table-success">Sajib Sarker</td>
+                    <td class="table-danger">A-</td>
+                    <td class="table-info">+88016101414411</td>
+                    <td class="table-dark">Saidpur, Nilphamari</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="table-warning">3</th>
+                    <td class="table-success">Sajjad Islam</td>
+                    <td class="table-danger">O+</td>
+                    <td class="table-info">+880170000000</td>
+                    <td class="table-dark">Saidpur, Nilphamari</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="table-warning">4</th>
+                    <td class="table-success">Sejan Mohanto</td>
+                    <td class="table-danger">A-</td>
+                    <td class="table-info">+880164444444</td>
+                    <td class="table-dark">Vujaripara</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="table-warning">5</th>
+                    <td class="table-success">Jago Mohanto</td>
+                    <td class="table-danger">A+</td>
+                    <td class="table-info">+880164541414</td>
+                    <td class="table-dark">Vujaripara</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="table-warning">6</th>
+                    <td class="table-success">Ariful Islam</td>
+                    <td class="table-danger">A+</td>
+                    <td class="table-info">+88016474747474</td>
+                    <td class="table-dark">Botlagari</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="table-warning">7</th>
+                    <td class="table-success">Najikul Islam</td>
+                    <td class="table-danger">B+</td>
+                    <td class="table-info">+8807444444444</td>
+                    <td class="table-dark">Botlagari Dangapara</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="table-warning">8</th>
+                    <td class="table-success">Abdul Mannan</td>
+                    <td class="table-danger">A+</td>
+                    <td class="table-info">+880797952600</td>
+                    <td class="table-dark">Botlagari Dangapara</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="table-warning">9</th>
+                    <td class="table-success">Abul Kalam</td>
+                    <td class="table-danger">O+</td>
+                    <td class="table-info">+8801988585858</td>
+                    <td class="table-dark">Porarhat</td>
+                </tr>
+                <tr>
+                    <th scope="row" class="table-warning">10</th>
+                    <td class="table-success">Shamim Islam</td>
+                    <td class="table-danger">AB-</td>
+                    <td class="table-info">+8807485858888</td>
+                    <td class="table-dark">Botlagari</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <!--Database End-->
+
+    <!--bootstrap js-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--custom js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#table_id').DataTable();
+        });
+
+    </script>
+
+{% endblock %}

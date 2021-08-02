@@ -1,0 +1,1082 @@
+/*font-family: 'Poppins', sans-serif;*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-weight: 400;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background: #fcfafa;
+}
+
+.container {
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-fluid img {
+    max-width: 180px;
+    max-height: 60px;
+}
+
+/*start navbar*/
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+    color: red;
+    font-weight: 500;
+    padding: 10px 40px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {}
+
+.bg-light {
+    background-color: #f9fafb !important;
+}
+
+.navbar {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 999;
+    border-bottom: 2px solid rgb(185, 177, 177);
+}
+
+/*hover menu*/
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+
+.my_anymation {
+    font-family: 'Raleway', Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.my_anymation * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.my_anymation li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0.5em 1.5em;
+    padding: 0;
+}
+
+.my_anymation a {
+    padding: 0.3em 0;
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.my_anymation a:before,
+.my_anymation a:after {
+    height: 3px;
+    position: absolute;
+    content: '';
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    background-color: #fc4603;
+    width: 0;
+}
+
+.my_anymation a:before {
+    top: 0;
+    left: 0;
+}
+
+.my_anymation a:after {
+    bottom: 0;
+    right: 0;
+}
+
+.my_anymation a:hover,
+.my_anymation .current a {
+    color: #ffffff;
+}
+
+.my_anymation a:hover:before,
+.my_anymation .current a:before,
+.my_anymation a:hover:after,
+.my_anymation .current a:after {
+    width: 100%;
+}
+
+/*menu hover end*/
+/*end navbar*/
+/*banar slider area start*/
+.slider_area {
+    padding-top: 70px;
+}
+
+.slider {
+    box-shadow: 1px 1px 25px 1px rgba(157, 153, 153, 0.27);
+    position: relative;
+}
+
+.slider:after {
+    content: "";
+    position: absolute;
+    clear: both;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 33, 33, 0.41);
+}
+.sr-only {
+	display: none;
+}
+.carousel-item {
+    background: #eee;
+}
+
+.carousel-item:hover {
+    cursor: grab;
+}
+
+.carousel-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+}
+
+.carousel-caption h2,
+.carousel-caption p.lead {
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+    z-index: 999;
+}
+
+.carousel-indicators li {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 100%;
+    align-self: center;
+    transition: all 0.6s ease-in-out;
+}
+
+.carousel-indicators li.active {
+    width: 1rem;
+    height: 1rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: #000;
+    color: #000;
+}
+
+/*banar slider area start*/
+/*start join with us*/
+.join_with_us_area {
+    padding: 30px 0px;
+    margin: 70px 0px;
+}
+
+.join_with_us {}
+
+.join_with_us_heading {
+    text-align: center;
+}
+
+.join_with_us_heading h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 10px;
+    padding: 40px 0px;
+}
+
+.join_with_us_form {}
+
+.join_with_us_form button {}
+
+.join_with_us_form button a {
+    color: #fff;
+}
+
+.join_with_us_form button:hover {}
+
+/*BTN START*/
+.new_f {
+    background: transparent;
+}
+
+.login-box {
+    margin: 0 0;
+    background: rgba(0, 0, 0, .0);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.login-box a span {
+    position: absolute;
+    display: block;
+}
+
+.login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 2s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 2s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 2s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 2s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+.login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 12px 20px;
+    text-align: center;
+    color: #03e9f4;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 0px;
+    letter-spacing: 10px;
+    border: 1px solid rgba(30, 227, 235, 0.13);
+}
+
+.login-box a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 0px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4;
+}
+
+.login-box a span {
+    position: absolute;
+    display: block;
+}
+
+.login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 2s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 2s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 2s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 2s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+/*BTN END*/
+/*end join with us*/
+/*Why we doneat blood start*/
+.why_we_blood_donat_main_area {
+    padding: 35px 0px;
+    margin: 70px 0px;
+}
+
+.w_w h1 {
+    font-size: 100px;
+}
+
+.why_we_blood_donat_heading {}
+
+.why_we_blood_donat_heading h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 10px;
+}
+
+.join_with_us_heading {}
+
+.why_we_blood_donat {
+    text-align: left;
+}
+
+.w_details {}
+
+.w_details h3 {
+    color: #000;
+    font-size: 27px;
+    width: 100%;
+    font-weight: 700;
+    padding: 45px 0px 30px 0px;
+}
+
+.w_details h4 {
+    color: #000;
+    font-size: 18px;
+    width: 100%;
+    font-weight: 500;
+}
+
+.w_details ul {
+    list-style: square;
+}
+
+.w_details ul li {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    line-height: 16px;
+    padding: 10px 0px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.w_details ul li:hover {
+    color: rgb(240, 162, 13);
+}
+
+/*Why we doneat blood end*/
+/*Counter area start*/
+.counter_area_start {
+    padding: 10px 0px 050px 0px;
+    margin-bottom: 30px;
+}
+
+.main_counter_area {}
+
+.counter_area {}
+
+.counter_item {
+    text-align: center;
+}
+
+.counter_icon {}
+
+.counter_icon i {
+    font-size: 42px;
+    background: red;
+    padding: 20px;
+    border-radius: 50%;
+    color: #fff;
+       cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.counter_icon i:hover {
+    background: #fff;
+    color: red;
+    border: 1px solid red;
+}
+
+.counter_text {
+    padding: 60px 0px;
+}
+
+.counter_text h3 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #000;
+}
+
+.counter_text span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+/*Counter area end*/
+/*admin start*/
+.admin_start {
+    padding: 70px 0px;
+    text-align: center;
+}
+
+.admin {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px 0px #bab6b6;
+}
+
+.admin_img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    padding: 25px 0px;
+}
+
+.admin img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.a_details {
+    padding: 40px 0px;
+}
+
+.socialIcons li {
+    background-color: gray;
+    list-style: none;
+    display: inline-block;
+    margin: 4px;
+    border-radius: 2em;
+    overflow: hidden;
+}
+
+.socialIcons li a {
+    display: inline-block;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 5px;
+    min-width: 1.28571429em;
+    max-width: 1.28571429em;
+    height: 1.28571429em;
+    white-space: nowrap;
+    line-height: 1.5em;
+    /*it's working only when you write text with icon*/
+    transition: 0.5s;
+    text-decoration: none;
+    font-family: arial;
+    color: #fff;
+}
+
+.socialIcons li i {
+    align-items: center;
+    margin-right: 0.5em;
+}
+
+.socialIcons li:hover a {
+    max-width: 200px;
+    padding-right: 1em;
+}
+
+/*admin end*/
+/*start footer section*/
+.main-footer-section {
+    background: #2c3035;
+    padding-top: 70px;
+    margin-top: 40px;
+}
+
+.footer-text-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-item {
+    flex-basis: 33%;
+}
+
+.footer-heading {}
+
+.footer-heading h1 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #d3cece;
+    text-transform: uppercase;
+}
+
+.footer-details {}
+
+.footer-details a {}
+
+.footer-details a img {
+    max-width: 180px;
+    max-height: 100px;
+}
+
+.footer-details p {
+    font-size: 13px;
+    font-weight: 400;
+    color: #d3cece;
+    padding: 10px 0px;
+    width: 90%;
+    text-align: justify;
+}
+
+.link ul li {
+    margin-left: -36px;
+}
+
+.link ul li a i {
+    margin-right: 10px;
+}
+
+.link ul li a {
+    font-size: 13px;
+    font-weight: 400;
+    color: #d3cece;
+    padding: 10px 0px;
+    margin-left: 12px;
+    display: inline-block;
+}
+
+.link {}
+
+.link ul li a:hover {
+    color: #a8d18a;
+}
+
+.post-text {
+    margin-left: 15px;
+}
+
+.post-text h4 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #d3cece;
+    font-family: 'Poppins', sans-serif;
+}
+
+.post-text span {
+    font-size: 10px;
+    font-weight: 700;
+    color: #98a0a9;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.copyright-section {
+    border-top: 2px solid #3d4045;
+    margin-top: 45px;
+}
+
+.copyright {
+    padding: 30px 0px;
+}
+
+.copyright p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #8e9398;
+}
+
+.copyright p i {
+    margin-right: 20px;
+}
+
+.copyright span a {
+    font-size: 14px;
+    font-weight: 300;
+    color: #8e9398;
+}
+
+/*end footer section*/
+/*about us area start*/
+.about_us_start {
+    margin-top: 130px;
+}
+
+.about_us_details {
+    width: 100%;
+    height: auto;
+}
+
+.about_us_details p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 30px;
+}
+
+/*about us area end*/
+/*main data table style sheet end*/
+a {
+    color: #000;
+}
+
+table {
+    cursor: pointer;
+}
+
+.main_database {
+    margin-top: 120px;
+}
+
+.table-light {
+    --bs-table-bg: #a7dcdc;
+    --bs-table-striped-bg: #ecedee;
+    --bs-table-striped-color: #000;
+    --bs-table-active-bg: #dfe0e1;
+    --bs-table-active-color: #000;
+    --bs-table-hover-bg: #e5e6e7;
+    --bs-table-hover-color: #000;
+    color: #000;
+    border-color: #dfe0e1;
+}
+
+.table-dark {
+    --bs-table-bg: #61209470;
+    --bs-table-striped-bg: #1c77d2;
+    --bs-table-striped-color: #fff;
+    --bs-table-active-bg: #39ef0b;
+    --bs-table-active-color: #fff;
+    --bs-table-hover-bg: #d6f30b;
+    --bs-table-hover-color: #ea0c0c;
+    color: #fff;
+    border-color: #badce3;
+}
+
+.table-warning {
+    --bs-table-bg: #8f9898;
+    --bs-table-striped-bg: #f2e7c3;
+    --bs-table-striped-color: #000;
+    --bs-table-active-bg: #e6dbb9;
+    --bs-table-active-color: #000;
+    --bs-table-hover-bg: #ece1be;
+    --bs-table-hover-color: #000;
+    color: #fff;
+    border-color: #e6dbb9;
+    text-align: center;
+}
+
+.d_heading {
+    text-align: center;
+    background: #dbd7d7;
+    padding: 15px 0px;
+    position: relative;
+}
+
+.d_heading h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: #000;
+}
+
+.d_heading p {
+    padding-bottom: 35px;
+}
+
+.search_bar {
+    position: absolute;
+    top: 72%;
+    left: 3%;
+    width: 100%;
+}
+
+.form-control {
+    width: 30%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+label {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    margin-right: 50px;
+    margin-left: 10px;
+    margin: 10px 50px 10px 10px;
+}
+
+.dataTables_wrapper {
+    position: relative;
+    clear: both;
+    background: #fff;
+}
+
+.dataTables_wrapper .dataTables_info {
+    padding-left: 20px;
+}
+
+/*main data table style sheet end*/
+/*registation form start*/
+.main_register_form_area {
+    padding: 120px 0px;
+}
+
+.bg-success {
+    background-color: #f9fafb !important;
+}
+
+/*registation form end*/
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group-text {
+    padding-bottom: 16px;
+}
+
+.javascript-condational-form {
+    overflow: hidden;
+    text-align: left;
+}
+
+.javascript-condational-form form label {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.javascript-condational-form form select {
+    font-size: 16px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px;
+    color: #666;
+}
+
+.javascript-condational-form form select option {
+    font-size: 16px;
+    color: #333;
+}
+
+.custom-select {
+    height: auto;
+}
+
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    width: 100%;
+    padding: 6px 0px;
+    color: gray;
+    border-radius: 5px;
+    border: 1px solid #CED4DA;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: gray;
+}
+
+/*registation form end*/
+/*personal form start*/
+.p_heading h1 {
+    font-size: 56px;
+    color: gray;
+    padding: 45px 0px;
+}
+
+.personal_information {
+    background: rgba(244, 240, 240, 0.11);
+    padding: 70px 0px;
+}
+
+.personal_details {
+    background: rgba(175, 150, 150, 0.11);
+    text-align: center;
+}
+
+.personal_img {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}
+
+.personal_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid red;
+    box-shadow: 5px 5px 20px 5px gray;
+}
+
+.details {
+    text-align: left;
+    color: #fff;
+    padding: 45px 0px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.table {
+    border-color: #0371de;
+}
+
+/*personal form end*/
+/*start login styel sheet*/
+.login_page {
+    margin-top: 150px;
+}
+
+.login_page a {
+    color: #3838b9;
+}
+
+.user_card {
+    height: 400px;
+    width: 350px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: #f8f8f8;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+.brand_logo_container {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    top: -75px;
+    border-radius: 50%;
+    background: #465053;
+    padding: 10px;
+    text-align: center;
+}
+
+.brand_logo {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.form_container {
+    margin-top: 100px;
+}
+
+.login_btn {
+    width: 100%;
+    background: #c0392b !important;
+    color: white !important;
+}
+
+.login_btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+.login_container {
+    padding: 0 2rem;
+}
+
+.input-group-text {
+    background: #c0392b !important;
+    color: white !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+    padding-bottom: 20px;
+}
+
+.input_user,
+.input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #c0392b !important;
+}
+
+/*end login styel sheet*/

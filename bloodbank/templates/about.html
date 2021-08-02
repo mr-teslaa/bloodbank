@@ -1,0 +1,50 @@
+{% extends 'root.html' %}
+
+{% block title %}
+    About Us -
+{% endblock %}
+
+{% block body %}
+    <!--start header area-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="https://i.ibb.co/grDLFDR/ourbloodbank-logo.png" alt="ourbloodbank" border="0"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-1 mb-lg-0 my_anymation">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('about') }}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('register') }}">Registaion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('login') }}">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--end header area-->
+    <section class="about_us_start mb-5">
+        <div class="container">
+            <div class="about_us">
+                <div class="about_us_headding">
+                    <h1 class="fw-bold">About Us</h1>
+                    <h2 class="fst-italic">BD Blood Bank</h2>
+                </div>
+                <div class="about_us_details row col-12 text-center">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis expedita veniam voluptas, suscipit nam nobis, blanditiis optio officia velit quia aperiam! Debitis modi similique quod accusantium in. Deleniti asperiores dicta beatae veniam, voluptatum laboriosam iure nobis quasi, optio similique dolorem repellendus praesentium molestiae necessitatibus eaque consectetur, quidem voluptate, neque eos. Voluptates qui recusandae aliquid nobis! Harum sit nisi quisquam odit magni laborum libero ducimus similique commodi iste atque maxime, facere cumque a voluptatibus, neque corporis aspernatur, illum porro sed? Facere sequi necessitatibus, debitis beatae, maxime iusto ab voluptatum numquam nobis aliquid repudiandae autem, consequuntur quia commodi aliquam quaerat. Numquam, unde, atque. Ducimus neque maxime dolor velit ipsa nisi id et commodi ipsum molestiae quaerat sint amet quae, ullam fugiat libero, voluptatem illo iusto beatae animi! Optio eius, esse! Minus ad blanditiis cum, debitis, dolor excepturi dicta fugit aliquid vero illo commodi magnam impedit omnis distinctio repudiandae eos aliquam! Et, inventore error cupiditate quia vero recusandae quis alias numquam asperiores id ad quibusdam incidunt nostrum ut omnis velit sunt dolorem non suscipit labore maiores itaque illum neque. Quo reprehenderit quas natus explicabo sunt optio esse amet voluptas quae consequatur repellendus minus quos, placeat vero, provident expedita dolores. Id corporis similique aliquam aspernatur, corrupti aperiam, a doloremque ipsa nam eligendi quam fugiat! Recusandae explicabo laborum fuga dolorum cum, deleniti beatae, dolorem magni hic at id aliquid sequi harum, nostrum voluptatum, dolore officia error sed iure iste adipisci consequuntur cumque nobis. Qui officiis, enim maxime, obcaecati quis quod voluptatibus aspernatur beatae tenetur expedita magnam molestiae. Quod quaerat impedit beatae odit doloremque, culpa iusto, voluptatem animi. Expedita odio et autem molestiae assumenda recusandae distinctio quos sed officia dicta labore hic nostrum voluptatem non commodi nulla earum saepe quidem blanditiis, laboriosam fugiat. Consequatur et voluptas in asperiores nostrum repellendus natus dolore ratione odit quibusdam debitis, deleniti laudantium tenetur voluptatum repellat non quam libero alias, inventore? Nesciunt, vitae pariatur. Harum iure rerum voluptas dignissimos, quisquam reprehenderit culpa quo modi, reiciendis, asperiores eos fugiat. Quam dolorum magni necessitatibus odio amet rem recusandae, laboriosam consequatur explicabo voluptatem sed nemo ut cum et fuga ratione est, harum, minima. Illum eius veritatis </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+{% endblock %}

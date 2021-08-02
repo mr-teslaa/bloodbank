@@ -1,0 +1,143 @@
+@media all and (max-width: 992px) {
+    .join_with_us_heading h1 {
+        font-size: 35px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .join_with_us_heading h1 {
+        font-size: 49px;
+    }
+
+    .why_we_blood_donat_main_area {
+        padding: 35px 0px;
+        margin: 00px 0px;
+    }
+    .mis-nav-buttons {
+	left: 31% !important;
+}
+    
+}
+
+@media all and (max-width: 480px) {
+    .join_with_us_heading h1 {
+        font-size: 39px;
+    }
+
+    .w_details h3 {
+        font-size: 25px;
+    }
+
+    .justify-content-start {
+        justify-content: center !important;
+    }
+
+    .justify-content-end {
+        justify-content: center !important;
+    }
+
+    .mis-nav-buttons {
+        left: 0% !important;
+    }
+
+    .footer-item {
+        flex-basis: 100%;
+    }
+}
+
+.card.admin.col-md-8.mx-auto {
+    width: 100% !important;
+}
+
+
+    .justify-content-between {
+        justify-content: flex-start !important;
+        text-align: left;
+        padding-left: 25px;
+    }
+
+@media all and (max-width: 320px) {
+    .join_with_us_heading h1 {
+        font-size: 23px;
+    }
+
+    .w_details h3 {
+
+        font-size: 18px;
+
+    }
+
+    .w_details ul li {
+        font-size: 14px;
+    }
+
+    .footer-text-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .justify-content-start {
+        justify-content: center !important;
+    }
+
+    .justify-content-end {
+        justify-content: center !important;
+    }
+
+    .mis-nav-buttons {
+        left: 0% !important;
+    }
+
+    .footer-item {
+        flex-basis: 100%;
+    }
+
+    .why_we_blood_donat_main_area {
+        padding: 0px 0px;
+        margin: 0px 0px;
+    }
+
+    .card.admin.col-md-8.mx-auto {
+        width: 100% !important;
+    }
+
+    .admin_img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .admin img {
+        width: 100px;
+        height: 100px;
+
+    }
+
+    .join_with_us_heading h1 {
+        font-size: 20px;
+    }
+
+    .why_we_blood_donat_heading h1 {
+        letter-spacing: 5px;
+    }
+
+    .join_with_us_heading h1 {
+        font-size: 23px;
+    }
+
+    .join_with_us_heading h1 {
+        letter-spacing: 3px;
+
+    }
+
+    .footer-details a img {
+        margin-bottom: 25px;
+    }
+
+    .justify-content-between {
+        justify-content: flex-start !important;
+        text-align: left;
+        padding-left: 25px;
+    }
+}

@@ -1,0 +1,218 @@
+{% extends 'root.html' %}
+
+
+{% block title %}
+    Edit Profile -
+{% endblock %}
+
+
+{% block body %}
+    <div class="container d-flex flex-row-reverse mt-3">
+        <a class="btn btn-danger ms-3" href="{{ url_for('logout') }}"> Logout </a>
+        <a class="btn btn-primary" href="{{ url_for('dashboard') }}"> Go Dashboard </a>
+        <a class="btn btn-primary" href="{{ url_for('demoDB') }}"> Database </a>
+        <a class="btn btn-primary" href="{{ url_for('index') }}"> Home </a>
+    </div>
+
+    <!--Personal Data Sheet-->
+    <div class="personal_information">
+        <div class="container">
+            <div class="personal_details">
+                <div class="p_heading">
+                    <h1>PERSONAL DATA SHEET</h1>
+                </div>
+                <div class="personal_img">
+                    <img src="{{ image_file }}" alt="personal image">
+                </div>
+                <div class="details">
+
+                    <form method="POST" action="" enctype="multipart/form-data">
+
+                        {{ form.hidden_tag() }}
+
+                        <div class="form-group input-group">
+                            <!--div class="input-group-prepend">
+                                <span class="input-group-text"> <i class='bx bxs-user'></i> </span>
+                            </div-->
+                            {{ form.name.label(class="form-label", style="margin-left: 0;") }}
+
+                            {% if form.name.errors %}
+                                {{ form.name(class="form-control text-capitalize is-invalid", placeholder="Full Name") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.name.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.name(class="form-control text-capitalize", placeholder="Full Name") }}
+                            {% endif %}
+
+                        </div>
+
+                        <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <!--div class="input-group-prepend">
+                                <span class="input-group-text"> <i class='bx bxs-donate-blood'></i> </span>
+                            </div-->
+                            <p class="text-dark mt-3" style="margin-bottom: 0;"> <b>Blood Group:</b> {{ current_user.bloodgroup }} </p>
+                        </div>
+
+                        <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <!--div class="input-group-prepend">
+                                <span class="input-group-text"> <i class='bx bx-envelope' ></i> </span>
+                            </div-->
+                            {{ form.email.label(class="form-label text-lowercase", style="margin-left: 0;") }}
+
+                            {% if form.email.errors %}
+                                {{ form.email(class="form-control text-lowercase is-invalid", placeholder="Email") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.email.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.email(class="form-control text-lowercase", placeholder="Email") }}
+                            {% endif %}
+                        </div>
+
+                        <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <!--div class="input-group-prepend">
+                                <span class="input-group-text"> <i class='bx bxs-phone' ></i> </span>
+                            </div-->
+                            {{ form.mobile.label(class="form-label", style="margin-left: 0;") }}
+
+                            {% if form.mobile.errors %}
+                                {{ form.mobile(class="form-control is-invalid", placeholder="Phone Number") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.mobile.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.mobile(class="form-control", placeholder="Phone Number") }}
+                            {% endif %}
+                        </div>
+
+                        <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <!--div class="input-group-prepend">
+                                <span class="input-group-text"> <i class='bx bxs-phone' ></i> </span>
+                            </div-->
+                            {{ form.lastdate.label(class="form-label", style="margin-left: 0;") }}
+
+                            {% if form.lastdate.errors %}
+                                {{ form.lastdate(class="form-control is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.lastdate.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.lastdate(class="form-control") }}
+                            {% endif %}
+                        </div>
+
+                        <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <!--div class="input-group-prepend">
+                                <span class="input-group-text"> <i class='bx bxs-phone' ></i> </span>
+                            </div-->
+                            {{ form.numberofdonation.label(class="form-label", style="margin-left: 0;") }}
+
+                            {% if form.numberofdonation.errors %}
+                                {{ form.numberofdonation(class="form-control is-invalid", placeholder="i.e: 3") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.numberofdonation.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.numberofdonation(class="form-control", placeholder="i.e: 3") }}
+                            {% endif %}
+                        </div>
+
+                        <!-- form-group// -->
+                        <div class="form-group text-dark">
+                            <h5> Address </h5>
+
+                            <p> Division: {{ current_user.division }}</p>
+
+
+                            <p> District: {{ current_user.district }}</p>
+
+                            <p> Upazila: {{ current_user.upazila }} </p>
+                        </div>
+
+                        <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <!--div class="input-group-prepend">
+                                <span class="input-group-text"> <i class='bx bxs-lock-alt' ></i> </span>
+                            </div-->
+                            {{ form.password.label(class="form-label", style="margin-left: 0;") }}
+
+                            {% if form.password.errors %}
+                                {{ form.password(class="form-control is-invalid", placeholder="Password") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.password.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.password(class="form-control", placeholder="Password") }}
+                            {% endif %}
+                        </div>
+
+                        <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <!--div class="input-group-prepend">
+                                <span class="input-group-text"> <i class='bx bxs-lock-alt' ></i> </span>
+                            </div-->
+                            {{ form.confirm_password.label(class="form-label", style="margin-left: 0;") }}
+
+                            {% if form.confirm_password.errors %}
+                                {{ form.confirm_password(class="form-control is-invalid", placeholder="Confirm Password") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.confirm_password.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.confirm_password(class="form-control", placeholder="Confirm Password") }}
+                            {% endif %}
+                        </div> <!-- form-group// -->
+                        <div class="form-group input-group">
+                            <!--div class="input-group-prepend">
+                                <span class="input-group-text"> <i class='bx bxs-image-add' ></i> </span>
+                            </div-->
+                            {{ form.picture.label(class="form-label", style="margin-left: 0;") }}
+
+                            {% if form.picture.errors %}
+                                {{ form.picture(class="form-control is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.picture.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.picture(class="form-control") }}
+                            {% endif %}
+                        </div> <!-- form-group// -->
+                        <div class="form-group" style="float: right;">
+                            {{ form.submit(class="btn btn-primary btn-block") }}
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--jquery js-->
+    <script src="{{ url_for('static', filename='js/jquery_filtering.js') }}"></script>
+    <!--bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--custom js-->
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+{% endblock %}
