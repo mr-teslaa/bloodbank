@@ -58,7 +58,16 @@ def register():
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
         if form.picture.data:
             profile_picture = save_profile_picture(form.picture.data)
-            user = User(name=form.name.data, username=form.username.data,\
+            if request.form.get('confirmdonor') == 'No':
+                user = User(name=form.name.data, username=form.username.data,\
+                        bloodgroup=form.bloodgroup.data,\
+                        email=form.email.data, password=hashed_password,\
+                        lastdate=db.null(), numberofdonation=form.numberofdonation.data,\
+                        mobile=form.mobile.data, division=request.form.get('division'),\
+                        district=request.form.get('district'), upazila=request.form.get('upazila'),\
+                        image_file=profile_picture)
+            else:
+                user = User(name=form.name.data, username=form.username.data,\
                         bloodgroup=form.bloodgroup.data,\
                         email=form.email.data, password=hashed_password,\
                         lastdate=form.lastdate.data, numberofdonation=form.numberofdonation.data,\
@@ -66,12 +75,21 @@ def register():
                         district=request.form.get('district'), upazila=request.form.get('upazila'),\
                         image_file=profile_picture)
         else:
-            user = User(name=form.name.data, username=form.username.data,\
+            if request.form.get('confirmdonor') == 'No':
+                user = User(name=form.name.data, username=form.username.data,\
+                        bloodgroup=form.bloodgroup.data,\
+                        email=form.email.data, password=hashed_password,\
+                        lastdate=db.null(), numberofdonation=form.numberofdonation.data,\
+                        mobile=form.mobile.data, division=request.form.get('division'),\
+                        district=request.form.get('district'), upazila=request.form.get('upazila') )
+            else:
+                user = User(name=form.name.data, username=form.username.data,\
                         bloodgroup=form.bloodgroup.data,\
                         email=form.email.data, password=hashed_password,\
                         lastdate=form.lastdate.data, numberofdonation=form.numberofdonation.data,\
                         mobile=form.mobile.data, division=request.form.get('division'),\
                         district=request.form.get('district'), upazila=request.form.get('upazila') )
+
         db.session.add(user)
         db.session.commit()
         flash('Your account has been created! You are now able to log in', 'success')

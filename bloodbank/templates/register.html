@@ -148,30 +148,50 @@
                                 {% endif %}
                             </div>
 
+                            <!-- make sure he donate the blood before -->
+                            <div class="form-group input-group">
+                                <label for="confirmdonor" class="form-label" style="margin-left: 0;"> 
+                                    Did you donate blood before? 
+                                </label>
+                                <select name="confirmdonor" id="donation" class="form-control" onchange="checkdonor()" style="width: 100%;">
+                                    <option value="No">No</option>
+                                    <option value="Yes">Yes</option>
+                                </select>
+                            </div>
+
                             <!-- form-group// -->
                             <div class="form-group input-group">
-                                <!--div class="input-group-prepend">
-                                    <span class="input-group-text"> <i class='bx bxs-phone' ></i> </span>
-                                </div-->
-                                <!--elect class="custom-select" style="max-width: 120px;">
-                                    <option selected="">+880</option>
-                                    <option value="1">+972</option>
-                                    <option value="2">+198</option>
-                                    <option value="3">+701</option>
-                                </select-->
                                 {{ form.lastdate.label(class="form-label", style="margin-left: 0;") }}
 
                                 {% if form.lastdate.errors %}
-                                    {{ form.lastdate(class="form-control is-invalid") }}
+                                    {{ form.lastdate(class="form-control is-invalid", id="lastdate") }}
                                     <div class="invalid-feedback">
                                         {% for error in form.lastdate.errors %}
                                             <span>{{ error }}</span>
                                         {% endfor %}
                                     </div>
                                 {% else %}
-                                    {{ form.lastdate(class="form-control") }}
+                                    {{ form.lastdate(class="form-control", id="lastdate") }}
                                 {% endif %}
                             </div>
+
+                            <script>
+                                const checkdonor = () => {
+                                    const donorvalue = document.querySelector('#donation').value,
+                                        lastdate = document.querySelector('#lastdate');
+                                    
+                                    // disable the date field if he/she didn't donate the blood before
+                                    if (donorvalue === 'Yes') {
+                                        lastdate.removeAttribute('disabled');
+                                    } else {
+                                        lastdate.setAttribute("disabled", true);
+                                    }
+                                }
+
+                                document.addEventListener('DOMContentLoaded', () => {
+                                    checkdonor();
+                                });
+                            </script>
 
                             <!-- form-group// -->
                             <div class="form-group input-group">

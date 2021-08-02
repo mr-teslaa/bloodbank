@@ -45,7 +45,11 @@
                             </tr>
                             <tr>
                                 <th scope="row">LAST DATE OF BLOOD DONATION</th>
-                                <td>{{ current_user.lastdate.strftime('%d-%m-%Y') }}</td>
+                                {% if current_user.lastdate %}
+                                    <td>{{ current_user.lastdate.strftime('%d-%m-%Y') }}</td>
+                                {% else %}
+                                    <td>{{ current_user.lastdate }}</td>
+                                {% endif %}
                             </tr>
                             <tr>
                                 <th scope="row">HOW MANY TIMES HAVE I GIVEN BLOOD</th>

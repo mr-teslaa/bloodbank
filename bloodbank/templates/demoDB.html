@@ -60,7 +60,13 @@
                         <td class="table-danger text-capitalize">{{ user.bloodgroup }}</td>
                         <td class="table-info"><a href="tel:+880{{ user.mobile }}">+880{{ user.mobile }}</a></td>
                         <td class="table-dark text-capitalize">{{ user.upazila }}, {{ user.disctrict }}, {{ user.division }}</td>
-                        <td class="table-dark">{{ user.lastdate.strftime('%d-%m-%Y') }}</td>
+                        
+                        {% if user.lastdate %}
+                            <td class="table-dark">{{ user.lastdate.strftime('%d-%m-%Y') }}</td>
+                        {% else %}
+                            <td class="table-dark">{{ user.lastdate }}</td>
+                        {% endif %}
+            
                     </tr>
                     {% endfor %}
                 </tbody>
